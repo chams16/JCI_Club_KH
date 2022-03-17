@@ -1,0 +1,11 @@
+.logo{
+  height: 60px;
+  width: 80px;
+}
+
+a:hover{
+  color: #0095ff;
+}
+nav{
+  cursor: pointer;
+}
