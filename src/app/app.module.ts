@@ -18,6 +18,7 @@ import { CovidVaccinationComponent } from './componenet/evenement/covid-vaccinat
 import { BeEffectiveComponent } from './componenet/evenement/be-effective/be-effective.component';
 import { ProfessionalCareeerComponent } from './componenet/evenement/professional-careeer/professional-careeer.component';
 import { SenatairesComponent } from './componenet/senataires/senataires.component';
+import { CopyrightComponent } from './componenet/footer/copyright/copyright.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { SenatairesComponent } from './componenet/senataires/senataires.componen
     CovidVaccinationComponent,
     BeEffectiveComponent,
     ProfessionalCareeerComponent,
-    SenatairesComponent
+    SenatairesComponent,
+    CopyrightComponent
   ],
   imports: [
     BrowserModule,
