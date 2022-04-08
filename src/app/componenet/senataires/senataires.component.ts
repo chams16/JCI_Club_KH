@@ -9,6 +9,16 @@ export class SenatairesComponent implements OnInit {
 
   Senateur: any[] = [
     {
+      "nom": "AROUS ALI",
+      "role": "Sénateur",
+      "annee": ""
+    },
+    {
+      "nom": "MILADI HABIB",
+      "role": "Sénateur",
+      "annee": ""
+    },
+    {
       "nom": "AMMAR ABDERRAOUF",
       "role": "Président Fondateur Sénateur",
       "annee": "1982"
@@ -20,7 +30,7 @@ export class SenatairesComponent implements OnInit {
     },
     {
       "nom": "LAZHAR BRAHEM",
-      "role": "Sénateur",
+      "role": "",
       "annee": "1984"
     },
     {
@@ -30,7 +40,7 @@ export class SenatairesComponent implements OnInit {
     },
     {
       "nom": "AHMED GAALICHE",
-      "role": "Sénateur",
+      "role": "",
       "annee": "1986"
     },
     {
@@ -55,17 +65,17 @@ export class SenatairesComponent implements OnInit {
     },
     {
       "nom": "MOUHAMMED ANOUAR FGAIER",
-      "role": "Sénateur",
+      "role": "",
       "annee": "1991"
     },
     {
       "nom": "FAYCEL HAMZA",
-      "role": "Sénateur",
+      "role": "",
       "annee": "1992"
     },
     {
       "nom": "HAMADI AOUNI",
-      "role": "Sénateur",
+      "role": "",
       "annee": "1993"
     },
     {
@@ -85,12 +95,12 @@ export class SenatairesComponent implements OnInit {
     },
     {
       "nom": "LASSAAD FANTAR",
-      "role": "Sénateur",
+      "role": "",
       "annee": "1996"
     },
     {
       "nom": "RIADH SOUA",
-      "role": "Sénateur",
+      "role": "",
       "annee": "1997"
     },
     {
@@ -105,37 +115,37 @@ export class SenatairesComponent implements OnInit {
     },
     {
       "nom": "FETHI MEZRI",
-      "role": "Sénateur",
+      "role": "",
       "annee": "2000"
     },
     {
       "nom": "LASSAAD AMEUR",
-      "role": "Sénateur",
+      "role": "",
       "annee": "2001"
     },
     {
       "nom": "ADEL AMEUR",
-      "role": "Sénateur",
+      "role": "",
       "annee": "2002"
     },
     {
       "nom": "CHAKER ZAYATI",
-      "role": "Sénateur",
+      "role": "",
       "annee": "2003"
     },
     {
       "nom": "CHAHIR AMARA",
-      "role": "Sénateur",
+      "role": "",
       "annee": "2004"
     },
     {
       "nom": "MOURAD BOUSSETTA",
-      "role": "Sénateur",
+      "role": "",
       "annee": "2005"
     },
     {
       "nom": "SOFIENE SLIMANE",
-      "role": "Sénateur",
+      "role": "",
       "annee": "2006"
     },
     {
@@ -145,68 +155,78 @@ export class SenatairesComponent implements OnInit {
     },
     {
       "nom": "ANIS NEMRI",
-      "role": "Sénateur",
+      "role": "",
       "annee": "2008"
     },
     {
       "nom": "AHMED MANSOUR",
-      "role": "Sénateur",
+      "role": "",
       "annee": "2009"
     },
     {
       "nom": "BAHI MOEZ",
-      "role": "Sénateur",
+      "role": "",
       "annee": "2010"
     },
     {
       "nom": "WAJDI SLIM",
-      "role": "Sénateur",
+      "role": "",
       "annee": "2011"
     },
     {
       "nom": "SOUFIENE FANTAR",
-      "role": "Sénateur",
+      "role": "",
       "annee": "2012"
     },
     {
       "nom": "KAIES DOUSS",
-      "role": "Sénateur",
+      "role": "",
       "annee": "2013"
     },
     {
       "nom": "ANIS NJIMA",
-      "role": "Sénateur",
+      "role": "",
       "annee": "2014"
     },
     {
       "nom": "ZIED SAIDANE",
-      "role": "Sénateur",
+      "role": "",
       "annee": "2015"
     },
     {
       "nom": "OUSSEMA GATI",
-      "role": "Sénateur",
+      "role": "",
       "annee": "2016"
     },
     {
       "nom": "MAROUEN SAIDANE",
-      "role": "Sénateur",
+      "role": "",
       "annee": "2017"
     },
     {
       "nom": "SABER EL HENI",
-      "role": "Sénateur",
+      "role": "",
       "annee": "2018"
     },
     {
       "nom": "FIRAS DOSS",
-      "role": "Sénateur",
+      "role": "",
       "annee": "2019"
     },
     {
       "nom": "HAMZA BOUZOUITA",
-      "role": "Sénateur",
+      "role": "",
       "annee": "2020"
+    },
+    {
+      "nom": "CHARFI LOCMEN",
+      "role": "",
+      "annee": "2021"
+    },
+    {
+      "nom": "BELAID SABRINE",
+      "role": "",
+      "annee": "2022"
     }
   ]
 
