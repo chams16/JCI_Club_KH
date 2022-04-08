@@ -1,22 +1,26 @@
-.titleHelp{
+.titleHelp {
   font-family: Cursive, serif;
   font-weight: bold;
 }
-.Etape{
+
+.Etape {
   font-family: Cursive, serif;
   font-weight: bold;
   margin-top: 10px;
   color: white;
 }
-.formbtn{
+
+.formbtn {
   border-radius: 15%;
   margin-left: 35%;
 }
-.helpImg{
+
+.helpImg {
   margin-left: 75px;
   margin-bottom: 55px;
 }
-.helpBox{
+
+.helpBox {
   margin-bottom: 125px;
   border-radius: 7%;
   box-shadow: -0.4em 0.5em gray;

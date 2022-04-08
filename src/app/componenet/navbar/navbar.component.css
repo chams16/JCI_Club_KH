@@ -1,11 +1,12 @@
-.logo{
+.logo {
   height: 60px;
   width: 80px;
 }
 
-a:hover{
+a:hover {
   color: #0095ff;
 }
-nav{
+
+nav {
   cursor: pointer;
 }

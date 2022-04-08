@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { CopyrightComponent } from './copyright.component';
+import {CopyrightComponent} from './copyright.component';
 
 describe('CopyrightComponent', () => {
   let component: CopyrightComponent;
@@ -8,9 +8,9 @@ describe('CopyrightComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CopyrightComponent ]
+      declarations: [CopyrightComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

@@ -1,8 +1,9 @@
-.evtImg{
+.evtImg {
   max-height: 230px;
   max-width: 500px;
   border-radius: 10%;
 }
-.evtBlock{
+
+.evtBlock {
   margin-bottom: 100px;
 }

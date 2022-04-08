@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 import {HomeComponent} from "./componenet/home/home.component";
 import {ContactUSComponent} from "./componenet/contact-us/contact-us.component";
 import {NewsComponent} from "./componenet/news/news.component";
@@ -18,11 +18,12 @@ const routes: Routes = [
   {path: 'beEffrctive', component: BeEffectiveComponent},
   {path: 'professionalCareer', component: ProfessionalCareeerComponent},
   {path: 'senateur', component: SenatairesComponent},
-  {path:'home',component:HomeComponent}
+  {path: 'home', component: HomeComponent}
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}

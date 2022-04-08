@@ -1,8 +1,9 @@
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
-  typeof define === 'function' && define.amd ? define(factory) :
-  (global = global || self, global.GLightbox = factory());
-}(this, (function () { 'use strict';
+    typeof define === 'function' && define.amd ? define(factory) :
+      (global = global || self, global.GLightbox = factory());
+}(this, (function () {
+  'use strict';
 
   function _typeof(obj) {
     "@babel/helpers - typeof";
@@ -43,6 +44,7 @@
   }
 
   var uid = Date.now();
+
   function extend() {
     var extended = {};
     var deep = true;
@@ -73,6 +75,7 @@
 
     return extended;
   }
+
   function each(collection, callback) {
     if (isNode(collection) || collection === window || collection === document) {
       collection = [collection];
@@ -88,7 +91,7 @@
 
     if (isArrayLike(collection) && !isObject(collection)) {
       var l = collection.length,
-          i = 0;
+        i = 0;
 
       for (; i < l; i++) {
         if (callback.call(collection[i], collection[i], i, collection) === false) {
@@ -105,6 +108,7 @@
       }
     }
   }
+
   function getNodeEvents(node) {
     var name = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
     var fn = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
@@ -127,16 +131,17 @@
 
     return data;
   }
+
   function addEvent(eventName) {
     var _ref = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {},
-        onElement = _ref.onElement,
-        withCallback = _ref.withCallback,
-        _ref$avoidDuplicate = _ref.avoidDuplicate,
-        avoidDuplicate = _ref$avoidDuplicate === void 0 ? true : _ref$avoidDuplicate,
-        _ref$once = _ref.once,
-        once = _ref$once === void 0 ? false : _ref$once,
-        _ref$useCapture = _ref.useCapture,
-        useCapture = _ref$useCapture === void 0 ? false : _ref$useCapture;
+      onElement = _ref.onElement,
+      withCallback = _ref.withCallback,
+      _ref$avoidDuplicate = _ref.avoidDuplicate,
+      avoidDuplicate = _ref$avoidDuplicate === void 0 ? true : _ref$avoidDuplicate,
+      _ref$once = _ref.once,
+      once = _ref$once === void 0 ? false : _ref$once,
+      _ref$useCapture = _ref.useCapture,
+      useCapture = _ref$useCapture === void 0 ? false : _ref$useCapture;
 
     var thisArg = arguments.length > 2 ? arguments[2] : undefined;
     var element = onElement || [];
@@ -182,19 +187,23 @@
     });
     return handler;
   }
+
   function addClass(node, name) {
     each(name.split(' '), function (cl) {
       return node.classList.add(cl);
     });
   }
+
   function removeClass(node, name) {
     each(name.split(' '), function (cl) {
       return node.classList.remove(cl);
     });
   }
+
   function hasClass(node, name) {
     return node.classList.contains(name);
   }
+
   function closest(elem, selector) {
     while (elem !== document.body) {
       elem = elem.parentElement;
@@ -210,6 +219,7 @@
       }
     }
   }
+
   function animateElement(element) {
     var animation = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
     var callback = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
@@ -246,6 +256,7 @@
       }
     });
   }
+
   function cssTransform(node) {
     var translate = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
 
@@ -264,15 +275,18 @@
     node.style.OTransform = translate;
     node.style.transform = translate;
   }
+
   function show(element) {
     element.style.display = 'block';
   }
+
   function hide(element) {
     element.style.display = 'none';
   }
+
   function createHTML(htmlStr) {
     var frag = document.createDocumentFragment(),
-        temp = document.createElement('div');
+      temp = document.createElement('div');
     temp.innerHTML = htmlStr;
 
     while (temp.firstChild) {
@@ -281,15 +295,17 @@
 
     return frag;
   }
+
   function windowSize() {
     return {
       width: window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
       height: window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
     };
   }
+
   function whichAnimationEvent() {
     var t,
-        el = document.createElement('fakeelement');
+      el = document.createElement('fakeelement');
     var animations = {
       animation: 'animationend',
       OAnimation: 'oAnimationEnd',
@@ -303,9 +319,10 @@
       }
     }
   }
+
   function whichTransitionEvent() {
     var t,
-        el = document.createElement('fakeelement');
+      el = document.createElement('fakeelement');
     var transitions = {
       transition: 'transitionend',
       OTransition: 'oTransitionEnd',
@@ -319,11 +336,12 @@
       }
     }
   }
+
   function createIframe(config) {
     var url = config.url,
-        allow = config.allow,
-        callback = config.callback,
-        appendTo = config.appendTo;
+      allow = config.allow,
+      callback = config.callback,
+      appendTo = config.appendTo;
     var iframe = document.createElement('iframe');
     iframe.className = 'vimeo-video gvideo';
     iframe.src = url;
@@ -348,6 +366,7 @@
 
     return iframe;
   }
+
   function waitUntil(check, onComplete, delay, timeout) {
     if (check()) {
       onComplete();
@@ -379,6 +398,7 @@
       }, timeout);
     }
   }
+
   function injectAssets(url, waitFor, callback) {
     if (isNil(url)) {
       console.error('Inject assets error');
@@ -473,38 +493,49 @@
     document.body.appendChild(script);
     return;
   }
+
   function isMobile() {
     return 'navigator' in window && window.navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(Android)|(PlayBook)|(BB10)|(BlackBerry)|(Opera Mini)|(IEMobile)|(webOS)|(MeeGo)/i);
   }
+
   function isTouch() {
     return isMobile() !== null || document.createTouch !== undefined || 'ontouchstart' in window || 'onmsgesturechange' in window || navigator.msMaxTouchPoints;
   }
+
   function isFunction(f) {
     return typeof f === 'function';
   }
+
   function isString(s) {
     return typeof s === 'string';
   }
+
   function isNode(el) {
     return !!(el && el.nodeType && el.nodeType == 1);
   }
+
   function isArray(ar) {
     return Array.isArray(ar);
   }
+
   function isArrayLike(ar) {
     return ar && ar.length && isFinite(ar.length);
   }
+
   function isObject(o) {
     var type = _typeof(o);
 
     return type === 'object' && o != null && !isFunction(o) && !isArray(o);
   }
+
   function isNil(o) {
     return o == null;
   }
+
   function has(obj, key) {
     return obj !== null && hasOwnProperty.call(obj, key);
   }
+
   function size(o) {
     if (isObject(o)) {
       if (o.keys) {
@@ -524,6 +555,7 @@
       return o.length;
     }
   }
+
   function isNumber(n) {
     return !isNaN(parseFloat(n)) && isFinite(n);
   }
@@ -733,7 +765,8 @@
       this.zoom = 1;
       this.isDoubleTap = false;
 
-      var noop = function noop() {};
+      var noop = function noop() {
+      };
 
       this.rotate = wrapFunc(this.element, option.rotate || noop);
       this.touchStart = wrapFunc(this.element, option.touchStart || noop);
@@ -799,7 +832,7 @@
         this.preTapPosition.y = this.y1;
         this.last = this.now;
         var preV = this.preV,
-            len = evt.touches.length;
+          len = evt.touches.length;
 
         if (len > 1) {
           this._cancelLongTap();
@@ -830,14 +863,14 @@
         }
 
         var preV = this.preV,
-            len = evt.touches.length,
-            currentX = evt.touches[0].pageX,
-            currentY = evt.touches[0].pageY;
+          len = evt.touches.length,
+          currentX = evt.touches[0].pageX,
+          currentY = evt.touches[0].pageY;
         this.isDoubleTap = false;
 
         if (len > 1) {
           var sCurrentX = evt.touches[1].pageX,
-              sCurrentY = evt.touches[1].pageY;
+            sCurrentY = evt.touches[1].pageY;
           var v = {
             x: evt.touches[1].pageX - currentX,
             y: evt.touches[1].pageY - currentY
@@ -872,7 +905,7 @@
             evt.deltaX = currentX - this.x2;
             evt.deltaY = currentY - this.y2;
             var movedX = Math.abs(this.x1 - this.x2),
-                movedY = Math.abs(this.y1 - this.y2);
+              movedY = Math.abs(this.y1 - this.y2);
 
             if (movedX > 10 || movedY > 10) {
               this._preventTap = true;
@@ -1506,14 +1539,14 @@
       _classCallCheck(this, DragSlides);
 
       var dragEl = config.dragEl,
-          _config$toleranceX = config.toleranceX,
-          toleranceX = _config$toleranceX === void 0 ? 40 : _config$toleranceX,
-          _config$toleranceY = config.toleranceY,
-          toleranceY = _config$toleranceY === void 0 ? 65 : _config$toleranceY,
-          _config$slide = config.slide,
-          slide = _config$slide === void 0 ? null : _config$slide,
-          _config$instance = config.instance,
-          instance = _config$instance === void 0 ? null : _config$instance;
+        _config$toleranceX = config.toleranceX,
+        toleranceX = _config$toleranceX === void 0 ? 40 : _config$toleranceX,
+        _config$toleranceY = config.toleranceY,
+        toleranceY = _config$toleranceY === void 0 ? 65 : _config$toleranceY,
+        _config$slide = config.slide,
+        slide = _config$slide === void 0 ? null : _config$slide,
+        _config$instance = config.instance,
+        instance = _config$instance === void 0 ? null : _config$instance;
       this.el = dragEl;
       this.active = false;
       this.dragging = false;
@@ -3648,8 +3681,8 @@
 
         each(this.apiEvents, function (event, i) {
           var evt = event.evt,
-              once = event.once,
-              callback = event.callback;
+            once = event.once,
+            callback = event.callback;
 
           if (evt == eventName) {
             callback(data);
@@ -3681,7 +3714,7 @@
     return GlightboxInit;
   }();
 
-  function glightbox () {
+  function glightbox() {
     var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
     var instance = new GlightboxInit(options);
     instance.init();

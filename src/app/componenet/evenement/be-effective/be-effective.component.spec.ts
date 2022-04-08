@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { BeEffectiveComponent } from './be-effective.component';
+import {BeEffectiveComponent} from './be-effective.component';
 
 describe('BeEffectiveComponent', () => {
   let component: BeEffectiveComponent;
@@ -8,9 +8,9 @@ describe('BeEffectiveComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BeEffectiveComponent ]
+      declarations: [BeEffectiveComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

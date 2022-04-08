@@ -19,7 +19,8 @@ body {
   margin-bottom: 12px
 }
 
-.list-group-item {}
+.list-group-item {
+}
 
 .list li {
   list-style: none;
@@ -42,6 +43,7 @@ body {
 .profile-image img {
   margin-left: 3px
 }
-.senateurBox{
+
+.senateurBox {
   margin-bottom: 70px;
 }
